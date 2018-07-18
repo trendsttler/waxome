@@ -1,6 +1,32 @@
 <style>
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
+.p-ab{
+    text-align: center;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);color: white;}
+.p-r{
+    position: relative;
+}
+.p-a{
+    position: absolute;
+}
+
+.r-way{
+    font-family: 'Raleway', sans-serif; 
+}
+ 
+        a{
+            text-decoration: none;
+            
+            
+        }
+       .navbar li a{
+            color: white;
+            opacity: .7;
+           font-size: 15px;
+        }
+       .navbar a:hover{
+            color: white;
+            opacity: 1;
+        }
 .parallax {
     /* The image used */
     background-image: url("image/bg-image.png");
@@ -14,16 +40,15 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-.p-ab{
-    text-align: center;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);color: white;}
-.p-r{
-    position: relative;
-}
-.p-a{
-    position: absolute;
-}
-
+         
+ 
 .r-way{
     font-family: 'Raleway', sans-serif; 
+    color: white;
+    font-size: 28px;
+    
+}
+.text-r{
+    float: right;
 }
 </style>
