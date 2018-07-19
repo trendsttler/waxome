@@ -29,10 +29,82 @@
 	
 	
 <style>
+* {box-sizing: border-box}
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
  
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: ;
+  font-size: 50px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  
+  
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  
+  color: #f1f1f1;
+}
+    .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
     
-    </style>	
-<script>
+}
+.fade:not(.show) {
+    opacity: 1;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}    
+    
+    </style>
+<!--javascript-->	
+   <script>
  $(window).scroll(function(){
             if ($(document).scrollTop() > 50){
                 $('nav').addClass('shrink','shadow-sm').removeClass('pt-3');
@@ -50,10 +122,10 @@
 <body>
    
 
-<div class="parallax ">
+<div class="slideshow-container">
     
    <!--navbar-->    
-        <nav  class="navbar   navbar-expand-lg  fixed-top "  >
+ <nav  class="navbar   navbar-expand-lg  fixed-top "  >
         
   <!-- Brand -->
   <div class="container ">
@@ -105,10 +177,60 @@
     </ul>
   </div> </div>
 </nav>
+
+
+  <div class="mySlides1 fade">
+    <img src="image/bg-image.png" class="w-100 p-r">
     
-    
+    <span class="p-ab slide-word text-center " >
+        <p class="r-m-slide  text-center m-0">Unique and Modern Design</p>
+        <p class="r-slide  text-center m-0 ">Portfolio PSD Template</p>
+        <p class="m-slide  text-center m-0">Nam liber tempor cum soluta nobis eleifend option r possim assum.</p>
+        <button class="btn btn-outline-white">shop now</button>
+    </span>
+  </div>
+
+  <div class="mySlides1 fade">
+    <img src="image/bg-image.png" style="width:100%">
+  </div>
+
+  <div class="mySlides1 fade">
+    <img src="image/bg-image.png" style="width:100%">
+  </div>
+
+  <a class="prev  res-l"  onclick="plusSlides(-1, 0)"><img class="wid" src="image/aro.png" ></a>
+  <a class="next res-r"  onclick="plusSlides(1, 0)"><img class="wid" src="image/aro-r.png" ></a>
+
+
+
 </div>
 
+
+        
+                
+
+<script>
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+    
+  x[slideIndex[no]-1].style.display = "block";  
+}
+    </script>
 
 </body>
 </html>    
