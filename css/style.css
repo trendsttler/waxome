@@ -12,7 +12,23 @@
 .r-way{
     font-family: 'Raleway', sans-serif; 
 }
- 
+.r-way-d{
+    font-family: 'Raleway', sans-serif; 
+    color: gray;
+    font-size: 28px;
+}
+.navbar-brand{
+    background-image: url(image/logo.png);
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 70px;
+        }
+.navbar-brand-d{
+    background-image: url(image/logo-dark.png);
+    height: 50px;
+    background-repeat: no-repeat;
+    width: 70px;
+}
         a{
             text-decoration: none;
             
@@ -27,12 +43,33 @@
             color: white;
             opacity: 1;
         }
+       .shrink li a{
+            color: black;
+            opacity: .7;
+           font-size: 15px;
+        }
+       .shrink a:hover{
+            color: black;
+            opacity: 1;
+        }
+
+       .shrink{
+           
+           
+           background-color: rgba(255, 255, 255, 0.68);
+           
+           
+       }
+
+
+
+
 .parallax {
     /* The image used */
     background-image: url("image/bg-image.png");
 
     /* Set a specific height */
-    min-height: 500px; 
+    min-height: 800px; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;

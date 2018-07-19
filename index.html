@@ -28,23 +28,38 @@
 	<link href="css/style.css" rel="stylesheet">
 	
 	
-
+<style>
+ 
+    
+    </style>	
+<script>
+ $(window).scroll(function(){
+            if ($(document).scrollTop() > 50){
+                $('nav').addClass('shrink','shadow-sm').removeClass('pt-3');
+                $('brand').addClass('navbar-brand-d',).removeClass('navbar-brand');
+                $('waxom').addClass('r-way-d',).removeClass('r-way');
+            }
+            else{
+                $('nav').removeClass('shrink','navbar-brand').addClass('pt-3');
+                $('brand').addClass('navbar-brand',).removeClass('navbar-brand-d');
+                $('waxom').addClass('r-way',).removeClass('r-way-d');
+            }
+        })
+    </script>
 </head>
 <body>
    
 
-<div class="parallax p-r">
-    <div class="container ">
+<div class="parallax ">
+    
    <!--navbar-->    
-        <nav class="navbar container navbar-expand-md p-a fixed-top mt-3">
+        <nav  class="navbar   navbar-expand-md  fixed-top "  >
         
   <!-- Brand -->
-  <div class="row">
+  <div class="container ">
   
-  <a class="navbar-brand" href="#">
-  <img src="image/logo.png"> 
-  <span class="r-way">Waxom</span>
-  </a>
+  <brand class="navbar-brand" href="#">
+ </brand><waxom class="r-way">Waxom</waxom>
 
   <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler bg-dark text-light " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -52,7 +67,7 @@
   </button>
 
   <!-- Navbar links -->
-  <div class="collapse navbar-collapse text-r" id="collapsibleNavbar">
+  <div class="collapse navbar-collapse  justify-content-center" id="collapsibleNavbar">
    
     <ul class="navbar-nav ">
      
@@ -88,9 +103,9 @@
       </li> 
       
     </ul>
-  </div> 
+  </div> </div>
 </nav>
-    </div>
+    
     
 </div>
 
